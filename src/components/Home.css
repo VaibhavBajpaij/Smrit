@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: flex-start;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #000000; /* Added explicit black text color */
 }
 
 .paste-header {
@@ -14,17 +15,18 @@
   margin-bottom: 30px;
   width: 100%;
   max-width: 1200px; /* Increased max-width */
+  color: #000000; /* Added black text color */
 }
 
 .paste-header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: #2c3e50; /* Already dark enough */
 }
 
 .paste-header p {
   font-size: 1.1rem;
-  color: #7f8c8d;
+  color: #34495e; /* Darkened from #7f8c8d for better contrast */
 }
 
 .paste-card {
@@ -35,6 +37,7 @@
   width: 100%;
   max-width: 1200px; /* Increased max-width */
   margin-bottom: 30px;
+  color: #000000; /* Added black text color */
 }
 
 .input-group {
@@ -61,6 +64,7 @@
   width: 100%; /* Full width */
   max-width: 100%; /* No max-width restriction */
   box-sizing: border-box; /* Include padding in width */
+  color: #000000; /* Added black text color */
 }
 
 .title-input:focus {
@@ -117,6 +121,7 @@
   resize: vertical;
   transition: all 0.3s ease;
   box-sizing: border-box; /* Include padding in width */
+  color: #000000; /* Added black text color */
 }
 
 .content-textarea:focus {
@@ -142,7 +147,7 @@
 
 .paste-footer {
   text-align: center;
-  color: #7f8c8d;
+  color: #34495e; /* Darkened from #7f8c8d for better contrast */
   font-size: 0.9rem;
 }
 
