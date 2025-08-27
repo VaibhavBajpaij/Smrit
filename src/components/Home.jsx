@@ -64,6 +64,20 @@ function Home() {
     setSearchParams({});
   }
 
+  // Add keyboard shortcut (Ctrl+Enter)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        createPast();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [title, value]);
+
   return (
     <div className="paste-container">
       <div className="paste-header animate-slide-down">
@@ -93,7 +107,7 @@ function Home() {
 
         <div className={`text-area-container ${isFocused ? 'focused' : ''}`}>
           <textarea
-            className="content-textarea w-min-[600px] w-full"
+            className="content-textarea"
             value={value}
             placeholder="Paste your content here..."
             onChange={(e) => setValue(e.target.value)}
